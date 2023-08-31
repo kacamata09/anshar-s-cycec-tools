@@ -1,6 +1,7 @@
 import socket
 import argparse
-
+import requests
+import json
 
 def add_arg():
     'Add argument in python execute'
@@ -44,8 +45,26 @@ def ip_checker(domain):
     arr_ipv4 = [ip[4][0] for ip in ip_addresses]
     print(f'Domain : {domain}')
     print('List ipv4 :')
+
     for ip in arr_ipv4:
         print(f'    - {ip}')
+
+        ### info ipaddr
+        url_geo = f'https://ipinfo.io/{ip}/json'
+        resp_geo = requests.get(url_geo)
+        geolocation = resp_geo.json()
+        
+        for key, value in geolocation.items():
+            # geolocation[i]
+            print(f"{key} : {value}")
+
+        # url_geo = f'https://geolocation-db.com/jsonp/{ip}'
+        # resp_geo = requests.get(url_geo)
+        # geolocation = resp_geo.content.decode()
+        # geolocation = geolocation.split("(")[1].strip(")")
+        # print(json.loads(geolocation))
+
+
 
 
 if __name__ == "__main__":
