@@ -1,3 +1,1 @@
-from . import ip_checker
-from . import geo_location
-from . import whois_checker
+from . import ip_checker, geo_location, whois_checker, admin_page_checker
