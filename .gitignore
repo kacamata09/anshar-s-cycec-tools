@@ -1,2 +1,8 @@
 .venv
 __pycache__
+
+
+# exe compile for information gathering - python
+information_gathering/python/dist
+information_gathering/python/build
+information_gathering/python/main.spec
