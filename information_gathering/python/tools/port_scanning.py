@@ -1,35 +1,31 @@
 import socket
 
+def port_checker(port):
+    # global target_host
+    result = client.connect_ex((target_host, port))
+    if result == 0:
+        print(f"Port {port} open at {target_host}")
+    # else:
+    #     print(f"Port {port} tertutup pada {target_host}")
 
-target_host = input("Masukkan alamat IP target: ")
-spam = input('Apa anda mau spam aja? : ')
+target_host = input("Input IP Address target: ")
 
-
-with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as client:
-
+with socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM) as client:
     while True:
+        spam = input('Do you want spam? y / n: ')
         if spam.lower() in ('n', 'no'):
-            target_port = int(input("Masukkan port target: "))
-            result = client.connect_ex((target_host, target_port))
-            if result == 0:
-                print(f"Port {target_port} terbuka pada {target_host}")
-            else:
-                print(f"Port {target_port} tertutup pada {target_host}")
+            target_port = int(input("Port target: "))
+            port_checker(target_port)
             break
         elif spam.lower() in ('y', 'yes'):
-            min_port = int(input("Masukkan min port target: "))
-            max_port = int(input("Masukkan max port target: "))
-
+            min_port = int(input("Min port target: "))
+            max_port = int(input("Max port target: "))
             port_range = range(min_port, max_port)
+
             # timeout = 2
             for port in port_range:
-                result = client.connect_ex((target_host, port))
-                if result == 0:
-                    print(f"Port {port} terbuka pada {target_host}")
-                else:
-                    print(f"Port {port} tertutup pada {target_host}")
-
+                port_checker(port)
             break
         else:
-            print("ketik y/n")
+            print("Please type y / n")
 
