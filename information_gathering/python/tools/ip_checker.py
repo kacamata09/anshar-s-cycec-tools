@@ -1,12 +1,6 @@
 import socket
 from . import geo_location as geoloc
 
-def argument(parser):
-    'argument from ip_checker'
-
-
-
-
 def ip_checker(domain, isgeoloc) -> list:
     'Function return ipv4 from domain'
     data = {}

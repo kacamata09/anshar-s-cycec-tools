@@ -1,7 +1,9 @@
 import requests
 
-def admin_page_check(domain):
+
+def admin_page_check(domain, dictionary):
     'return if found admin page'
+
     admin_urls = [
         "admin/",
         "login/",
@@ -16,6 +18,11 @@ def admin_page_check(domain):
         "administrator/",
         "backend/"
     ]
+
+    if dictionary:
+    # if len(dictionary) > 0:
+        admin_urls = dictionary
+    
 
     target_url = domain
 

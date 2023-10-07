@@ -9,6 +9,7 @@ def get_public_ip():
         else:
             return "Gagal mendapatkan IP publik."
     except Exception as e:
+        
         return str(e)
 
 public_ip = get_public_ip()
