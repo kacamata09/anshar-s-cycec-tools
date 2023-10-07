@@ -1,12 +1,23 @@
 ### Anshar-s-Cysec-Tools
 
-# Information Gathering
-How to use Information gathering:
+### First step :
+#### I recommend create a virtual environment, because requests module sometimes problem in windows, the way is :  
+In linux :  
+python -m venv <environment_name>
 
-In linux :
+In windows / macOS :  
+python3 -m venv <environment_name>
+
+#### Install module requirements :
+pip install -r requirements.txt
+
+# Information Gathering
+How to use information gathering:  
+
+In linux :  
 python3 main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
 
-In windows / macOS :
+In windows / macOS :  
 python main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
   
 should use -u <URL> or --url <URL> for add url or domain,  
