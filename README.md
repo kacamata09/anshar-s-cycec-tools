@@ -3,10 +3,10 @@
 ### First step :
 #### I recommend create a virtual environment, because requests module sometimes problem in windows, the way is :  
 In linux :  
-python -m venv <environment_name>
+python3 -m venv <environment_name>
 
 In windows / macOS :  
-python3 -m venv <environment_name>
+python -m venv <environment_name>
 
 #### Install module requirements :
 pip install -r requirements.txt
