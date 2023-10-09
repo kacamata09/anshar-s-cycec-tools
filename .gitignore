@@ -6,3 +6,9 @@ __pycache__
 information_gathering/python/dist
 information_gathering/python/build
 information_gathering/python/main.spec
+
+# ignore exe extensiion
+**/*.exe
+
+# experiment folder
+**/experiment_malware
