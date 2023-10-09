@@ -3,13 +3,20 @@
 ### First step :
 #### I recommend create a virtual environment, because requests module sometimes problem in windows, the way is :  
 In linux :  
-python3 -m venv <environment_name>
+
+```
+python3 -m venv environment_name
+```
 
 In windows / macOS :  
-python -m venv <environment_name>
+```
+python -m venv environment_name
+```
 
 #### Install module requirements :
+```
 pip install -r requirements.txt
+```
 
 # Information Gathering
 How to use information gathering:  
@@ -19,6 +26,11 @@ python3 main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
 
 In windows / macOS :  
 python main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
+
+Example if u will use option 2 of information gathering :
+```
+python3 main.py -u facebook.com -i 2 -gl
+```
   
 should use -u <URL> or --url <URL> for add url or domain,  
 and should use -i <YOUR_OPTION> or --information <YOUR_OPTION> for choose  
