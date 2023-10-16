@@ -27,10 +27,10 @@ pip install -r requirements.txt
 How to use information gathering:
 
 In linux :  
-python3 main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
+`python3 main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]`
 
 In windows / macOS :  
-python main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]
+`python main.py [-h] [-v] [-D DICT] [-u URL] [-i {1,2,3}] [-gl]`
 
 Example if u will use option 2 of information gathering :
 
