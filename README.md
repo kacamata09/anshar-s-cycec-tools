@@ -1,11 +1,10 @@
 ### Anshar-s-Cysec-Tools
 
-### First step :
+### Setup :
 
 I recommend create a virtual environment, because requests module sometimes problem in windows, the way is :
 
-In linux :
-
+In linux :  
 ```
 python3 -m venv environment_name
 ```
@@ -15,6 +14,17 @@ In windows / macOS :
 ```
 python -m venv environment_name
 ```
+
+Activate venv in linux terminal, macOS terminal and git bash:
+```
+source environment_name/Scripts/activate
+```
+
+Activate venv in cmd and powershell:
+```
+environment_name/Scripts/activate
+```
+
 
 #### Install module requirements :
 
