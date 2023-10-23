@@ -14,7 +14,10 @@ and should use -i <YOUR_OPTION> or --information <YOUR_OPTION> for choose
 type of information gathering you want, there are options:
 1. Ip Checker
 2. Whois Checker
-3. Admin Page Cheker'''
+3. Admin Page Cheker
+4. Port Scanning
+
+'''
 
 should_add_domain = \
 """------------------------SHOULD ADD DOMAIN---------------------------
@@ -46,7 +49,7 @@ class Main():
             "-u", "--url", action="store", help="Add url or domain"
         )
         self.parser.add_argument(
-            "-i", "--information", action="store", choices=[1, 2, 3], type=int, help="Options for Information Gathering"
+            "-i", "--information", action="store", choices=[1, 2, 3, 4], type=int, help="Options for Information Gathering"
         )
 
     
@@ -85,6 +88,8 @@ class Main():
             tools.whois_checker.whois_check(self.args.url)
         elif self.args.information == 3:
             tools.admin_page_checker.admin_page_check(self.args.url, dictionary_txt)
+        elif self.args.information == 4:
+            tools.port_scanning.port_scan(self.args.url)
 
 
 

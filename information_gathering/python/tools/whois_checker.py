@@ -2,10 +2,7 @@ import whois
 # def argument(parser):
 #     'argument from ip_checker'
 
-
-
-
-def whois_check(domain) -> list:
+def whois_check(domain):
     'Function return whois info from domain'
     info = whois.whois(domain)
     # print(info)
