@@ -1,0 +1,4 @@
+-------DOCS API WINDOWS IN C / C++ Language--------
+https://learn.microsoft.com/en-us/windows/win32/api/
+
+-------DOCS API LINUX IN C / C++ Language--------

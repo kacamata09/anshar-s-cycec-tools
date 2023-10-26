@@ -2,7 +2,9 @@
 
 ### Setup :
 
-I recommend create a virtual environment, because requests module sometimes problem in windows, the way is :
+I recommend create a virtual environment, because requests module sometimes problem in windows
+
+#### Create virtual environment:
 
 In linux :  
 ```
